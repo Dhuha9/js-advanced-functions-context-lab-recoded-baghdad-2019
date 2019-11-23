@@ -28,7 +28,7 @@ function createEmployees(arrayOfEmployeesArrays) {
     })
 }
 function createEmployeeRecord([firstName, familyName, title, payRatePerHour]) {
-    return obj = {
+    return {
         firstName: firstName
         , familyName: familyName
         , title: title
@@ -39,7 +39,7 @@ function createEmployeeRecord([firstName, familyName, title, payRatePerHour]) {
 }
 
 function createTimeInEvent(dateStamp) {
-    date = dateStamp.split(" ")
+   let date = dateStamp.split(" ")
     timeObj = {
         type: "TimeIn"
         , date: date[0]
@@ -50,7 +50,7 @@ function createTimeInEvent(dateStamp) {
 }
 
 function createTimeOutEvent(dateStamp) {
-    date = dateStamp.split(" ")
+   let date = dateStamp.split(" ")
     timeObj = {
         type: "TimeOut"
         , date: date[0]
@@ -84,11 +84,8 @@ function findEmployeebyFirstName(srcArray, firstName) {
 
    return srcArray.reduce(function (e) {
         if (e.firstName === firstName) return e
-
     })
-
 }
-
 
 function calculatePayroll(arrayOfEmployee) {
 
