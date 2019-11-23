@@ -23,7 +23,7 @@ let allWagesFor = function () {
 
 function createEmployees(arrayOfEmployeesArrays) {
 
-    return arrayOfObj = arrayOfEmployeesArrays.map(function (a) {
+    return arrayOfEmployeesArrays.map(function (a) {
         return createEmployeeRecord.call(this, a);
     })
 }
@@ -40,7 +40,7 @@ function createEmployeeRecord([firstName, familyName, title, payRatePerHour]) {
 
 function createTimeInEvent(dateStamp) {
    let date = dateStamp.split(" ")
-    timeObj = {
+   let timeObj = {
         type: "TimeIn"
         , date: date[0]
         , hour: parseInt(date[1]) 
@@ -51,7 +51,7 @@ function createTimeInEvent(dateStamp) {
 
 function createTimeOutEvent(dateStamp) {
    let date = dateStamp.split(" ")
-    timeObj = {
+   let timeObj = {
         type: "TimeOut"
         , date: date[0]
         , hour: parseInt(date[1]) 
